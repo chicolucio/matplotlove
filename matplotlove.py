@@ -41,16 +41,19 @@ class Heart01:
         plt.show()
 
 
-    e = heart_01.subs({a: constant})
-    p = plot_implicit(e, show=False)
+class Heart02(Heart01):
 
-    intervals = np.array(p[0].get_points()[0])
-    px = tuple(map(mid_value, intervals[:, 0]))
-    py = tuple(map(mid_value, intervals[:, 1]))
-    points = np.array((px, py))
-
+    def show(self, frames=5, interval=10, blit=False):
+        ani = animation.FuncAnimation(self.fig, self.animate, frames=frames,
+                                      interval=interval, blit=blit)
+        plt.show()
 
 
-ani = animation.FuncAnimation(fig, animate, frames=5, interval=10,
-                              blit=True)
-plt.show()
+if __name__ == "__main__":
+    heart01 = Heart01()
+    heart01.show(interval=1)
+    heart02 = Heart02()
+    heart02.show(interval=1)
+
+# TODO new heart shapes
+# TODO readme
