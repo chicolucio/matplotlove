@@ -51,7 +51,8 @@ class Heart03(Heart01):
 
     def __init__(self):
         super().__init__()
-        self.eq = sympy.Eq(self.x**2 + (self.y - sympy.sqrt(sympy.Abs(self.x)))**2 - self.a, 0)
+        self.eq = sympy.Eq(
+            self.x**2 + (self.y - sympy.sqrt(sympy.Abs(self.x)))**2 - self.a, 0)
 
 
 class Heart04(Heart03):
@@ -64,7 +65,8 @@ class Heart05(Heart01):
 
     def __init__(self):
         super().__init__()
-        self.eq = sympy.Eq(self.x**2 + self.a*(sympy.Rational(3, 5) * (self.x**2)**sympy.Rational(1, 3) - self.y)**2 - 1, 0)
+        self.eq = sympy.Eq(self.x**2 + self.a*(sympy.Rational(3, 5)
+                           * (self.x**2)**sympy.Rational(1, 3) - self.y)**2 - 1, 0)
 
 
 class Heart06(Heart05):
@@ -77,7 +79,8 @@ class Heart07(Heart01):
 
     def __init__(self):
         super().__init__()
-        self.eq = sympy.Eq(self.x**2 + 2*(sympy.Rational(3, 5) * (self.x**2)**sympy.Rational(1, 3) - self.y)**2 - self.a, 0)
+        self.eq = sympy.Eq(self.x**2 + 2*(sympy.Rational(3, 5) *
+                           (self.x**2)**sympy.Rational(1, 3) - self.y)**2 - self.a, 0)
 
 
 class Heart08(Heart07):
