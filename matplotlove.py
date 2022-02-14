@@ -189,9 +189,23 @@ class Heart3d02(Heart3d01):
 
 if __name__ == "__main__":
     heart01 = Heart01()
-    heart01.show(interval=1)
+    heart01.show()
     heart02 = Heart02()
-    heart02.show(interval=1)
-
-# TODO new heart shapes
-# TODO readme
+    heart02.show()
+    heart03 = Heart03()
+    heart03.show()
+    heart04 = Heart04()
+    heart04.show()
+    # slow...
+    # heart05 = Heart05()
+    # heart05.show()
+    # heart06 = Heart06()
+    # heart06.show()
+    # heart07 = Heart07()
+    # heart07.show()
+    # heart08 = Heart08()
+    # heart08.show()
+    heart_3d_01 = Heart3d01()
+    heart_3d_01.show()
+    heart_3d_02 = Heart3d02()
+    heart_3d_02.show()
