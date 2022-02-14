@@ -1,5 +1,5 @@
 import sympy
-from sympy.plotting import plot, plot_implicit
+from sympy.plotting import plot_implicit
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import numpy as np
@@ -150,8 +150,8 @@ class Heart3d01:
         self.ax.set_axis_off()
 
     @staticmethod
-    def heart3D(x, y, z):
-        return (x**2 + (9/4) * y**2 + z**2 - 1)**3 - x**2 * z**3 - (9/80) * y**2 * z**3 < 0
+    def heart3D(x, y, z, n=0):
+        return (x**2 + (9/4) * y**2 + z**2 - 1)**3 - x**2 * z**3 - (9/80) * y**2 * z**3 < n
 
     def animate(self, i):
         self.ax.view_init(elev=30, azim=3.6*i)
@@ -162,6 +162,26 @@ class Heart3d01:
                            colormap=plt.cm.PuRd, slices=50)
         ani = animation.FuncAnimation(self.fig, self.animate,
                                       frames=100, interval=10, blit=False)
+
+        plt.tight_layout()
+        plt.show()
+
+
+class Heart3d02(Heart3d01):
+
+    def __init__(self):
+        super().__init__()
+        self.ax.view_init(elev=30, azim=90)
+
+    def animate(self, i):
+        self.ax.dist = i
+        return self.fig,
+
+    def show(self):
+        self.plot_implicit(self.heart3D, bbox=(-1.3, 1.3),
+                           colormap=plt.cm.PuRd, slices=50)
+        ani = animation.FuncAnimation(self.fig, self.animate, frames=(10, 20),
+                                      interval=300, blit=False)
 
         plt.tight_layout()
         plt.show()
