@@ -43,10 +43,21 @@ class Heart01:
 
 class Heart02(Heart01):
 
-    def show(self, frames=5, interval=10, blit=False):
-        ani = animation.FuncAnimation(self.fig, self.animate, frames=frames,
-                                      interval=interval, blit=blit)
-        plt.show()
+    def show(self):
+        super().show(blit=False)
+
+
+class Heart03(Heart01):
+
+    def __init__(self):
+        super().__init__()
+        self.eq = sympy.Eq(self.x**2 + (self.y - sympy.sqrt(sympy.Abs(self.x)))**2 - self.a, 0)
+
+
+class Heart04(Heart03):
+
+    def show(self):
+        super().show(blit=False)
 
 
 if __name__ == "__main__":
