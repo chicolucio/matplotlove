@@ -191,6 +191,7 @@ def cli():
 
     while True:
         try:
+            print('\n\nWelcome to matplotlove!! By chicolucio', end='\n\n')
             print('Press 2 for 2D or 3 for 3D')
             choice_2d_3d = input('Do you want a 2D or a 3D heart? ')
         except KeyboardInterrupt:
