@@ -60,6 +60,32 @@ class Heart04(Heart03):
         super().show(blit=False)
 
 
+class Heart05(Heart01):
+
+    def __init__(self):
+        super().__init__()
+        self.eq = sympy.Eq(self.x**2 + self.a*(sympy.Rational(3, 5) * (self.x**2)**sympy.Rational(1, 3) - self.y)**2 - 1, 0)
+
+
+class Heart06(Heart05):
+
+    def show(self):
+        super().show(blit=False)
+
+
+class Heart07(Heart01):
+
+    def __init__(self):
+        super().__init__()
+        self.eq = sympy.Eq(self.x**2 + 2*(sympy.Rational(3, 5) * (self.x**2)**sympy.Rational(1, 3) - self.y)**2 - self.a, 0)
+
+
+class Heart08(Heart07):
+
+    def show(self):
+        super().show(blit=False)
+
+
 if __name__ == "__main__":
     heart01 = Heart01()
     heart01.show(interval=1)
