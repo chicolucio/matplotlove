@@ -35,7 +35,7 @@ class Heart01:
         heart = self.ax.scatter(*points)
         return heart,
 
-    def show(self, frames=5, interval=10, blit=True):
+    def show(self, frames=range(1, 6), interval=1, blit=True):
         ani = animation.FuncAnimation(self.fig, self.animate, frames=frames,
                                       interval=interval, blit=blit)
         plt.show()
