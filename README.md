@@ -21,13 +21,21 @@ for the equations with SymPy or NumPy and plots the points with Matplotlib.
 Valentine's Day, also called Saint Valentine's Day or the Feast of Saint
 Valentine, is celebrated annually on February 14 in many regions of the world.
 
-## Usage
+## Installation
+1. Run 
+```
+    pip install git+git://https://github.com/chicolucio/matplotlove/
+```
+2. That's it!
+(it will install all the dependencies for you)
 
-1. clone the repo, not a package yet :-(
-2. create a virtual environment with Python 3.8+
-3. activate the virtual environment
-4. install dependencies
-5. run the script and follow the instructions
+## VENV
+You can also run this package on virtual environments by following the following instructions: 
+
+1. create a virtual environment with Python 3.8+
+2. activate the virtual environment
+3. install dependencies
+4. run the script and follow the instructions
 
 ```bash
 git clone https://github.com/chicolucio/matplotlove
