@@ -1,4 +1,4 @@
-import matplotlove.hearts
+from matplotlove import hearts
 
 
 def main():
