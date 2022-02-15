@@ -27,7 +27,8 @@ Valentine, is celebrated annually on February 14 in many regions of the world.
     pip install git+git://https://github.com/chicolucio/matplotlove/
 ```
 2. That's it!
-(it will install all the dependencies for)
+(it will install all the dependencies for you)
+
 ## VENV
 You can also run this package on virtual environments by following the following instructions: 
 
